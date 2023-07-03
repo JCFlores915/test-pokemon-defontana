@@ -26,10 +26,10 @@ npm run dev
 - Counter of pokemons in the list
 
 ## Screenshots
-
-
+![My Image](./src/assets/image/screen.png)
 
 ## Technologies
+- Vite
 - React.js
 - Typescript
 - Axios
