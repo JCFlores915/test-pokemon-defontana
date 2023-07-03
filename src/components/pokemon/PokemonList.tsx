@@ -7,6 +7,7 @@ import { EyeFilled } from "@ant-design/icons"
 import { ColumnType } from 'antd/lib/table';
 import { PokemonsResponse, DataSourceType } from '../../interface/Pokemon.Interface';
 import SearchInput from '../shared/Search';
+import { cardBox } from '../../data';
 
 const PokemonList = ({ onSelectPokemon }: any) => {
 
@@ -94,7 +95,7 @@ const PokemonList = ({ onSelectPokemon }: any) => {
         <div style={box}>
             <Row>
                 <Col xs={24} sm={12} md={12} lg={12} xl={12}>
-                    <h3>Lista de Pokemon</h3>
+                    <h3>{cardBox.listTitle}</h3>
                 </Col>
                 <Col xs={24} sm={12} md={12} lg={12} xl={12}>
                     <SearchInput

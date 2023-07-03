@@ -3,6 +3,7 @@ import Table from "../shared/Table"
 import { usePokemonList } from "../../hooks/usePokemonList"
 import { ColumnType } from "antd/es/table"
 import { DataSourceType } from "../../interface/Pokemon.Interface"
+import { cardBox } from "../../data"
 
 const PokemonCount = () => {
     const { pokemonsList, isLoading } = usePokemonList();
@@ -52,7 +53,7 @@ const PokemonCount = () => {
 
     return (
         <div style={box}>
-            <h3>Conteo de Pokemons</h3>
+            <h3>{cardBox.countTitle}</h3>
             <hr />
 
             <Table

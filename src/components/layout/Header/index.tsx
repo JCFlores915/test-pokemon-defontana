@@ -1,5 +1,6 @@
 import { Layout } from 'antd'
 import './styles.css'
+import { data } from '../../../data'
 
 const { Header: AntHeader } = Layout
 
@@ -8,7 +9,7 @@ const Header = () => {
     <AntHeader className='header'>
 
         {/* // ADD TITLE HERE */}
-        <h1>Test Pokemon</h1>
+        <h1>{data.titleHeader}</h1>
 
 
     </AntHeader>

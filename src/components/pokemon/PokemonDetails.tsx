@@ -3,6 +3,7 @@ import { box } from "./styles"
 import { Avatar, Row, Skeleton } from "antd";
 import { WarningFilled } from "@ant-design/icons";
 import { center, spacebetween } from "./styles";
+import { cardBox } from "../../data";
 const PokemonDetails = ({ selectedPokemon }: any) => {
     // hacer que el name sea todo en minuscula
     let name = selectedPokemon?.name?.toLowerCase();
@@ -24,8 +25,6 @@ const PokemonDetails = ({ selectedPokemon }: any) => {
                                 src={selectedPokemon?.image} />}
 
                     </div>
-
-
 
                     <Skeleton loading={isLoading} active>
                         <div style={center}>
@@ -72,27 +71,22 @@ const PokemonDetails = ({ selectedPokemon }: any) => {
                         <h4>Imagenes: </h4>
 
                         <Row style={spacebetween}>
-                         
-                                {pokemonDetails?.sprites?.front_default && <img src={pokemonDetails?.sprites?.front_default} alt="pokemon" width={100} height={100} /> }
-                                {pokemonDetails?.sprites?.back_default && <img src={pokemonDetails?.sprites?.back_default} alt="pokemon" width={100} height={100} />}
-                                {pokemonDetails?.sprites?.front_shiny && <img src={pokemonDetails?.sprites?.front_shiny} alt="pokemon" width={100} height={100} />}
-                                {pokemonDetails?.sprites?.back_shiny && <img src={pokemonDetails?.sprites?.back_shiny} alt="pokemon" width={100} height={100} />}
+
+                            {pokemonDetails?.sprites?.front_default && <img src={pokemonDetails?.sprites?.front_default} alt="pokemon" width={100} height={100} />}
+                            {pokemonDetails?.sprites?.back_default && <img src={pokemonDetails?.sprites?.back_default} alt="pokemon" width={100} height={100} />}
+                            {pokemonDetails?.sprites?.front_shiny && <img src={pokemonDetails?.sprites?.front_shiny} alt="pokemon" width={100} height={100} />}
+                            {pokemonDetails?.sprites?.back_shiny && <img src={pokemonDetails?.sprites?.back_shiny} alt="pokemon" width={100} height={100} />}
                         </Row>
 
                     </Skeleton>
                 </div>
-
-
-
-
-
 
             </div>
         )
     } else {
         return (
             <div style={box}>
-                <h3>Detalle del pokemon</h3>
+                <h3>{cardBox.detailTitle}</h3>
                 <hr />
 
                 {/* SHOW MESSAGE TO SELECT A POKEMON AND CENTER MIDDLE */}
